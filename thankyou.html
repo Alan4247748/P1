@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Your Order</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+            padding: 50px;
+        }
+        .thank-you-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #4CAF50;
+            font-size: 2.5em;
+        }
+        pre {
+            text-align: left;
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <h1>Thank You for Your Order!</h1>
+        <p>Your order has been successfully placed. Here are the details:</p>
+        <pre id="order-details"></pre>
+    </div>
+
+    <script>
+        // Fetch the payment response from the backend
+        async function fetchPaymentResponse() {
+            try {
+                const response = await fetch('/process-payment', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        amount: 99.99, // Example payment details
+                        cardNumber: '4111111111111111',
+                        expiryDate: '12/25',
+                        cvv: '123'
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Payment processing failed');
+                }
+
+                const paymentResponse = await response.json();
+
+                // Display the payment response
+                document.getElementById('order-details').textContent = JSON.stringify(paymentResponse, null, 2);
+
+                // Save the payment response to the database
+                await saveOrderToDatabase(paymentResponse);
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while processing your payment.');
+            }
+        }
+
+        // Send the payment response to the backend to save it to the database
+        async function saveOrderToDatabase(orderData) {
+            try {
+                const response = await fetch('/save-order', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(orderData)
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to save order');
+                }
+
+                console.log('Order saved successfully');
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        // Fetch and display the payment response when the page loads
+        fetchPaymentResponse();
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Das E-Commerce</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav role="navigation" class="nav-bar">
+      <a href="/">
+        <img src="/images/ab.png" alt="Das Logo" width="90">
+      </a>
+      <div class="nav-links">
+        <a href="index.html" aria-current="page" class="nav-item active">Products</a>
+        <a href="https://www.dasfilter.shop/" target="_blank" class="nav-item">Merch</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+      </div>
+      <a href="#" class="cart-link" onclick="toggleCart()" aria-label="Open cart">
+        <i class="fas fa-shopping-cart"></i> Cart (<span id="cart-count">0</span>)
+      </a>
+    </nav>
+  </header>
+  <main>
+    <div id="product-list" class="product-grid">
+      <!-- Products will load here dynamically -->
+    </div>
+  </main>
+  <div class="cart hidden" id="cart-container">
+    <h3>Your Cart <button class="close-cart-button" onclick="toggleCart()" aria-label="Close cart">×</button></h3>
+    <div id="cart-items">
+      <p>Cart is empty</p>
+    </div>
+    <p id="cart-total">Total: $0.00</p>
+    <button id="clear-cart-button" onclick="clearCart()">Clear Cart</button>
+    <button id="checkout-button" onclick="checkout()">Checkout</button>
+  </div>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-left">
+          <a href="index.html">
+            <img src="/images/ab.png" alt="Das Logo" width="90">
+          </a>
+          <p class="tagline">FILTERS, PAPERS, AND CONES.</p>
+          <div class="x-follow-button">
+            <a href="https://x.com/das_filter" target="_blank" rel="noopener">
+              <button class="x-button">
+                <span class="x-logo">𝕏</span> Follow @das_filter
+              </button>
+            </a>
+          </div>
+          <p class="fda-disclaimer">
+            The statements made regarding these products have not been evaluated by the Food and Drug Administration.
+            <strong>The efficacy of these products has not been confirmed by FDA-approved research.</strong>
+            These products are not intended to diagnose, treat, cure or prevent any disease.
+          </p>
+        </div>
+        <div class="footer-center">
+          <h3>Site Map</h3>
+          <ul>
+            <li><a href="index.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="legal.html">Legal</a></li>
+            <li><a href="legal.html">Terms Of Service</a></li>
+            <li><a href="legal.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-right">
+          <h2>Company Address</h2>
+          <address>
+            Das Filter, LLC<br>
+            903 West Mary<br>
+            Austin, Texas<br>
+            78704
+          <p>+1-737-334-8042</p>
+      </address>
+          <div class="payment-icons">
+            <i class="fa-brands fa-cc-paypal"></i>
+            <i class="fa-brands fa-cc-visa"></i>
+            <i class="fa-brands fa-cc-mastercard"></i>
+            <i class="fa-brands fa-cc-amex"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+  <script src="cart.js"></script>
+  <script>
+    // Toggle cart visibility
+    function toggleCart() {
+      const cartContainer = document.getElementById('cart-container');
+      if (cartContainer) {
+        cartContainer.classList.toggle('hidden');
+      }
+    }
+
+    // Update cart count
+    function updateCartCount() {
+      const cartCount = document.getElementById('cart-count');
+      if (cartCount) {
+        cartCount.textContent = cart.length;
+      }
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      updateCartCount();
+    });
+  </script>
+</body>
+</html>

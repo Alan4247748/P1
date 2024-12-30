@@ -1,0 +1,172 @@
+[
+    {
+        "Product ID": "drm",
+        "Product Handle": "drm",
+        "Product Name": "Das Rolling Machine ",
+        "Product Description": "king size roller ",
+        "Product Categories": "Papers;Filters;Packages",
+        "Main Variant Image": "https://cdn.prod.website-files.com/674f390c1decc7e538ec2952/6761c32d0ff043f4f141b2f4_Screenshot%202024-09-03%20at%2012.44.31.png",
+        "Variant Price": "9.00",
+        "Variant Inventory": 100.0
+    },
+    {
+        "Product ID": "sj20",
+        "Product Handle": "sj20",
+        "Product Name": "Slim jim",
+        "Product Description": "20 count — 6mm by 28mm ",
+        "Product Categories": "Filters",
+        "Main Variant Image": "https://cdn.prod.website-files.com/674f390c1decc7e538ec2952/67609bcd8852fba705c5fd0a_Screenshot%202024-12-16%20at%2015.14.36.png",
+        "Variant Price": "9.00",
+        "Variant Inventory": 100
+    },
+    {
+        "Product ID": "midway",
+        "Product Handle": "midway",
+        "Product Name": "Midway",
+        "Product Description": "20 count — 7mm by 28mm ",
+        "Product Categories": "Filters",
+        "Main Variant Image": "https://cdn.prod.website-files.com/674f390c1decc7e538ec2952/67609b2b6636be5a7a661aac_Screenshot%202024-12-16%20at%2015.15.21.png",
+        "Variant Price": "10.00",
+        "Variant Inventory": 100
+    },
+    {
+        "Product ID": "20bb",
+        "Product Handle": "20bb",
+        "Product Name": "Big Boy",
+        "Product Description": "40 count — 8mm by 37mm",
+        "Product Categories": "Filters",
+        "Main Variant Image": "https://cdn.prod.website-files.com/674f390c1decc7e538ec2952/67609a7db1f4aa916838d6f7_Screenshot%202024-12-16%20at%2015.14.55.png",
+        "Variant Price": "10.00",
+        "Variant Inventory": 100
+    },
+    {
+        "Product ID": "nb3",
+        "Product Handle": "nb3",
+        "Product Name": "3 NANNER BARRELS",
+        "Product Description": "3 count — 1g nanner barrels",
+        "Product Categories": "Nanner Barrels",
+        "Main Variant Image": "https://cdn.prod.website-files.com/674f390c1decc7e538ec2952/675c8cffa093d5718b4d9604_Artboard%201.png",
+        "Variant Price": "12.00",
+        "Variant Inventory": 100
+    },
+    {
+        "Product ID": "nb6",
+        "Product Handle": "nb6",
+        "Product Name": "6 NANNER BARRELS",
+        "Product Description": "6 count — 1g nanner barrels ",
+        "Product Categories": "Nanner Barrels",
+        "Main Variant Image": "https://cdn.prod.website-files.com/674f390c1decc7e538ec2952/675c8bbc521e4023fb13b149_Artboard%201.png",
+        "Variant Price": "20.00",
+        "Variant Inventory": 100
+    },
+    {
+        "Product ID": "bb",
+        "Product Handle": "bb",
+        "Product Name": "BIG BOY",
+        "Product Description": "40 count — 8mm by 37mm",
+        "Product Categories": "Filters",
+        "Main Variant Image": "https://cdn.prod.website-files.com/674f390c1decc7e538ec2952/674f4e882984b77982221d8f_bb.png",
+        "Variant Price": "20.00",
+        "Variant Inventory": 100
+    },
+    {
+        "Product ID": "7mm",
+        "Product Handle": "7mm",
+        "Product Name": "MIDWAY",
+        "Product Description": "40 count — 7mm by 28mm ",
+        "Product Categories": "Filters",
+        "Main Variant Image": "https://cdn.prod.website-files.com/674f390c1decc7e538ec2952/674f4f363d68d1d76968505f_midway.png",
+        "Variant Price": "20.00",
+        "Variant Inventory": 100
+    },
+    {
+        "Product ID": "6mm",
+        "Product Handle": "6mm",
+        "Product Name": "SLIM JIM",
+        "Product Description": "40 count — 6mm by 28mm ",
+        "Product Categories": "Filters",
+        "Main Variant Image": "https://cdn.prod.website-files.com/674f390c1decc7e538ec2952/674f4f6afd91f4e7f561896f_sj.png",
+        "Variant Price": "20.00",
+        "Variant Inventory": 100
+    },
+    {
+        "Product ID": "12mm",
+        "Product Handle": "12mm",
+        "Product Name": "12 mm",
+        "Product Description": " Das Mega — 2 count — 12mm by 30mm ",
+        "Product Categories": "Filters",
+        "Main Variant Image": "https://cdn.prod.website-files.com/674f390c1decc7e538ec2952/674f4fe4ebf8d29c3ab19174_Screenshot%202024-12-03%20at%2012.36.49.png",
+        "Variant Price": "6.00",
+        "Variant Inventory": 50
+    },
+    {
+        "Product ID": "ks",
+        "Product Handle": "ks",
+        "Product Name": "KING SLIM",
+        "Product Description": "32 papers per booklet",
+        "Product Categories": "Papers",
+        "Main Variant Image": "https://cdn.prod.website-files.com/674f390c1decc7e538ec2952/674f5712ea2094069b439801_ks.png",
+        "Variant Price": "4.00",
+        "Variant Inventory": 100
+    },
+    {
+        "Product ID": "qr",
+        "Product Handle": "qr",
+        "Product Name": "1 & 1/4",
+        "Product Description": "32 papers per booklet ",
+        "Product Categories": "Papers",
+        "Main Variant Image": "https://cdn.prod.website-files.com/674f390c1decc7e538ec2952/674f57efee92d514822885e8_Screenshot%202024-12-03%20at%2013.11.07.png",
+        "Variant Price": "4.00",
+        "Variant Inventory": 100
+    },
+    {
+        "Product ID": "nb",
+        "Product Handle": "nb",
+        "Product Name": "20 NANNER BARRELS",
+        "Product Description": "20 count — 1g nanner barrels ",
+        "Product Categories": "Papers;Nanner Barrels",
+        "Main Variant Image": "https://cdn.prod.website-files.com/674f390c1decc7e538ec2952/675c8c62643ed33a60954913_Artboard%201.png",
+        "Variant Price": "50.00",
+        "Variant Inventory": 100
+    },
+    {
+        "Product ID": "das1",
+        "Product Handle": "das1",
+        "Product Name": "DAS SAMPLER",
+        "Product Description": "3 nanner' barrels, three 20 count packs, 2 rolling booklets",
+        "Product Categories": "Papers;Packages;Filters",
+        "Main Variant Image": "https://cdn.prod.website-files.com/674f390c1decc7e538ec2952/6760b1718e70986d6f6e09d1_Screenshot%202024-12-16%20at%2017.01.38.png",
+        "Variant Price": "42.00",
+        "Variant Inventory": 100
+    },
+    {
+        "Product ID": "dm",
+        "Product Handle": "dm",
+        "Product Name": "Das Rolling machine ",
+        "Product Description": "King Size",
+        "Product Categories": "Papers",
+        "Main Variant Image": "https://cdn.prod.website-files.com/674f390c1decc7e538ec2952/674f605356b21a34a0c7dfcf_Screenshot%202024-12-03%20at%2013.47.17.png",
+        "Variant Price": "9.00",
+        "Variant Inventory": 100
+    },
+    {
+        "Product ID": "mp",
+        "Product Handle": "mp",
+        "Product Name": "Mouthpiece & Filters",
+        "Product Description": "10 Filters & 1 Mouthpiece",
+        "Product Categories": "Packages",
+        "Main Variant Image": "https://cdn.prod.website-files.com/674f390c1decc7e538ec2952/674f737354d481c13200c47d_Screenshot%202024-12-03%20at%2015.08.49.png",
+        "Variant Price": "20.00",
+        "Variant Inventory": 100
+    },
+    {
+        "Product ID": "bbks",
+        "Product Handle": "bbks",
+        "Product Name": "Higher Values Package",
+        "Product Description": "big boy, slim jim, & rolling booklets ",
+        "Product Categories": "Packages;Filters;Papers",
+        "Main Variant Image": "https://cdn.prod.website-files.com/674f390c1decc7e538ec2952/674f71f4196fea474f140a69_Screenshot%202024-12-03%20at%2015.02.15.png",
+        "Variant Price": "38.00",
+        "Variant Inventory": 100
+    }
+]

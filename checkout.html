@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Das E-Commerce</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.goshippo.com/shippo.js"></script>
+  <script src="https://jstest.authorize.net/v1/Accept.js" charset="utf-8"></script>
+</head>
+<body>
+  <header>
+    <nav role="navigation" class="nav-bar">
+      <a href="/">
+        <img src="/images/ab.png" alt="Das Logo" width="90">
+      </a>
+      <div class="nav-links">
+        <a href="index.html" aria-current="page" class="nav-item active">Products</a>
+        <a href="https://www.dasfilter.shop/" target="_blank" class="nav-item">Merch</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+      </div>
+      <a href="#" class="cart-link" onclick="toggleCart()" aria-label="Open cart">
+        <i class="fas fa-shopping-cart"></i> Cart (<span id="cart-count">0</span>)
+      </a>
+    </nav>
+  </header>
+
+  <!-- Cart Summary -->
+  <main>
+    <section id="cart-summary" class="cart-summary">
+      <h2 class="cart-summary__heading">Your Order</h2>
+      <table id="cart-items" class="cart-summary__table" role="table" data-cart-items>
+        <thead>
+          <tr>
+            <th scope="col" class="cart-summary__header">Product</th>
+            <th scope="col" class="cart-summary__header">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Cart items will be dynamically inserted here -->
+        </tbody>
+        <tfoot>
+          <tr class="cart-summary__shipping">
+            <td class="cart-summary__shipping-label" colspan="1"><strong>Shipping:</strong></td>
+            <td class="cart-summary__shipping-cost">$7.00</td>
+          </tr>
+          <tr class="cart-summary__total">
+            <td class="cart-summary__total-label" colspan="1"><strong>Total:</strong></td>
+            <td id="cart-total" class="cart-summary__total-amount" data-cart-total>$30.00</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+  </main>
+
+  <!-- Customer Information -->
+  <form id="checkout-form" class="checkout-form">
+    <h2>Customer Information</h2>
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" required>
+    </div>
+
+    <!-- Shipping Information -->
+    <h2>Shipping Information</h2>
+    <div class="form-group">
+      <label for="shipping-address">Address</label>
+      <input type="text" id="shipping-address" name="shipping-address" required>
+    </div>
+    <div class="form-group">
+      <label for="shipping-city">City</label>
+      <input type="text" id="shipping-city" name="shipping-city" required>
+    </div>
+    <div class="form-group">
+      <label for="shipping-state">State</label>
+      <input type="text" id="shipping-state" name="shipping-state" required>
+    </div>
+    <div class="form-group">
+      <label for="shipping-zip">ZIP Code</label>
+      <input type="text" id="shipping-zip" name="shipping-zip" required>
+    </div>
+
+    <!-- Payment Information -->
+    <h2>Payment Information</h2>
+    <div class="form-group">
+      <label for="card-number">Card Number</label>
+      <input type="text" id="card-number" name="card-number" required>
+    </div>
+    <div class="form-group">
+      <label for="expiry">Expiration Date</label>
+      <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+    </div>
+    <div class="form-group">
+      <label for="cvv">CVV</label>
+      <input type="text" id="cvv" name="cvv" required>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="submit-button place-order-button">Place Order</button>
+  </form>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <a href="index.html">
+          <img src="/images/ab.png" alt="Das Logo" width="90">
+        </a>
+        <p class="tagline">FILTERS, PAPERS, AND CONES.</p>
+        <div class="x-follow-button">
+          <a href="https://x.com/das_filter" target="_blank" rel="noopener">
+            <button class="x-button">
+              <span class="x-logo">𝕏</span> Follow @das_filter
+            </button>
+          </a>
+        </div>
+        <p class="fda-disclaimer">
+          The statements made regarding these products have not been evaluated by the Food and Drug Administration.
+          <strong>The efficacy of these products has not been confirmed by FDA-approved research.</strong>
+          These products are not intended to diagnose, treat, cure or prevent any disease.
+        </p>
+      </div>
+      <div class="footer-center">
+        <h3>Site Map</h3>
+        <ul>
+          <li><a href="index.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="legal.html">Legal</a></li>
+          <li><a href="legal.html">Terms Of Service</a></li>
+          <li><a href="legal.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-right">
+        <h2>Company Address</h2>
+        <address>
+          Das Filter, LLC<br>
+          903 West Mary<br>
+          Austin, Texas<br>
+          78704
+          <p>+1-737-334-8042</p>
+        </address>
+        <div class="payment-icons">
+          <i class="fa-brands fa-cc-paypal"></i>
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-brands fa-cc-amex"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Dynamic Cart Summary -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const cartItems = document.getElementById('cart-items').querySelector('tbody');
+      const cartTotal = document.getElementById('cart-total');
+      const shippingCost = document.querySelector('.cart-summary__shipping-cost');
+
+      if (cart.length === 0) {
+        alert('Your cart is empty. Add some products before checking out.');
+        window.location.href = '/';
+        return;
+      }
+
+      // Render cart items
+      cartItems.innerHTML = cart.map(item => `
+        <tr class="cart-summary__item">
+          <td class="cart-summary__item-name">${item.productName}</td>
+          <td class="cart-summary__item-price">$${(item.productPrice * item.quantity).toFixed(2)}</td>
+        </tr>
+      `).join('');
+
+      // Calculate subtotal
+      const subtotal = cart.reduce((sum, item) => sum + item.productPrice * item.quantity, 0);
+
+      // Calculate shipping (example: $7.00 flat rate)
+      const shipping = 7.00;
+
+      // Calculate total
+      const total = subtotal + shipping;
+
+      // Update DOM
+      shippingCost.textContent = `$${shipping.toFixed(2)}`;
+      cartTotal.textContent = `$${total.toFixed(2)}`;
+    });
+
+    document.getElementById('checkout-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Validate inputs
+      const cardNumber = document.getElementById('card-number').value;
+      const expiry = document.getElementById('expiry').value;
+      const cvv = document.getElementById('cvv').value;
+
+      if (!/^\d{15,16}$/.test(cardNumber)) {
+        alert('Please enter a valid card number (15 or 16 digits).');
+        return;
+      }
+
+      if (!/^\d{2}\/\d{2}$/.test(expiry)) {
+        alert('Please enter a valid expiration date (MM/YY).');
+        return;
+      }
+
+      const [month, year] = expiry.split('/');
+      const currentDate = new Date();
+      const currentYear = currentDate.getFullYear() % 100;
+      const currentMonth = currentDate.getMonth() + 1;
+
+      if (year < currentYear || (year == currentYear && month < currentMonth)) {
+        alert('The expiration date must be in the future.');
+        return;
+      }
+
+      if (!/^\d{3,4}$/.test(cvv)) {
+        alert('Please enter a valid CVV (3 or 4 digits).');
+        return;
+      }
+
+      // Validate address
+      const shippingAddress = {
+        name: document.getElementById('name').value,
+        street1: document.getElementById('shipping-address').value,
+        city: document.getElementById('shipping-city').value,
+        state: document.getElementById('shipping-state').value,
+        zip: document.getElementById('shipping-zip').value
+      };
+
+      const validationResult = await validateAddress(shippingAddress);
+
+      if (!validationResult.is_valid) {
+        console.error('Invalid address:', validationResult.messages);
+        alert('Please enter a valid shipping address.');
+        return;
+      }
+
+      // Process payment
+      const formData = new FormData(e.target);
+      const data = Object.fromEntries(formData.entries());
+      data.cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      try {
+        const response = await fetch('/process-payment', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          alert('Payment successful! Thank you for your purchase.');
+          localStorage.removeItem('cart');
+          window.location.href = '/thank-you';
+        } else {
+          alert('Payment failed. Please try again.');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again.');
+      }
+    });
+
+    document.getElementById('checkout-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const placeOrderButton = document.querySelector('.place-order-button');
+  placeOrderButton.disabled = true;
+  placeOrderButton.textContent = 'Processing...';
+
+  try {
+    // Your existing code for form validation and payment processing
+
+    if (result.success) {
+      alert('Payment successful! Thank you for your purchase.');
+      localStorage.removeItem('cart');
+      window.location.href = '/thank-you';
+    } else {
+      alert('Payment failed. Please try again.');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert('An error occurred. Please try again.');
+  } finally {
+    placeOrderButton.disabled = false;
+    placeOrderButton.textContent = 'Place Order';
+  }
+});
+  </script>
+</body>
+</html>
